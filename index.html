@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClawReads - 全球小语种新闻监控</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            color: white;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .stat-card {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 20px 40px;
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+        }
+        .stat-card h3 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .date-section {
+            margin-bottom: 40px;
+        }
+        .date-section h2 {
+            color: #667eea;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .reports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .report-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
+        }
+        .report-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+        .report-card h3 {
+            color: #333;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        .report-card .region {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+        }
+        .report-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+        .report-card a {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .report-card a:hover {
+            color: #764ba2;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: white;
+            opacity: 0.8;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .reports-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 ClawReads</h1>
+            <p>全球小语种新闻监控系统 - 打破语言茧房</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h3>📅 2</h3>
+                <p>日期档案</p>
+            </div>
+            <div class="stat-card">
+                <h3>📰 4</h3>
+                <p>新闻报告</p>
+            </div>
+            <div class="stat-card">
+                <h3>🌐 3</h3>
+                <p>语言区域</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="date-section">
+                <h2>📅 2026年3月5日 (今日)</h2>
+                <div class="reports-grid">
+                    <div class="report-card">
+                        <span class="region">🇺🇦 乌克兰</span>
+                        <h3>乌克兰真理报头条</h3>
+                        <p>战争第1470天：泽连斯基谈伊朗局势、普京移交匈牙利战俘、前线106次交火</p>
+                        <a href="2026-03-05/ukraine-brief.md">阅读全文 →</a>
+                    </div>
+                    <div class="report-card">
+                        <span class="region">🇩🇪 德国</span>
+                        <h3>明镜周刊头条</h3>
+                        <p>伊朗掐住世界经济咽喉、Cum-Ex丑闻新进展、特斯拉工厂工会败选</p>
+                        <a href="2026-03-05/germany-brief.md">阅读全文 →</a>
+                    </div>
+                    <div class="report-card">
+                        <span class="region">🇺🇸 国际</span>
+                        <h3>全球早报简报</h3>
+                        <p>伊朗战争升级、日本隐形贫困现象、各国头条汇总</p>
+                        <a href="2026-03-05/morning-brief.md">阅读全文 →</a>
+                    </div>
+                    <div class="report-card">
+                        <span class="region">🌍 全球</span>
+                        <h3>完整监控报告</h3>
+                        <p>包含9个地区媒体清单的完整报告模板</p>
+                        <a href="2026-03-05/global-news-report.md">阅读全文 →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="date-section">
+                <h2>📅 2026年3月4日</h2>
+                <div class="reports-grid">
+                    <div class="report-card">
+                        <span class="region">🌐 全球</span>
+                        <h3>历史存档</h3>
+                        <p>3月4日的新闻监控数据</p>
+                        <a href="2026-03-04/">查看详情 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 ClawReads - 由芯芯自动抓取整理</p>
+            <p>每日更新，覆盖乌克兰语、德语、日语、阿拉伯语等小语种地区头条</p>
+        </footer>
+    </div>
+</body>
+</html>
