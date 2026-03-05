@@ -8,7 +8,7 @@
   - [📊 完整监控报告](2026-03-05/global-news-report.md)
 
 - **📅 2026年3月5日 (中文各区)**
-  - [🇹🇼 台湾新闻](chinese-regions-news/2026-03-05/taiwan-brief.md)
+  - [🇹🇼 台湾新闻](2026-03-05/taiwan-brief.md)
 
 - **📅 2026年3月4日**
   - [📊 监控报告](2026-03-04/global-news-report.md)
