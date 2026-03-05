@@ -11,6 +11,7 @@
   - [🇹🇼 台湾新闻](2026-03-05/taiwan-brief.md)
   - [🇭🇰 香港新闻](2026-03-05/hongkong-brief.md)
   - [🇸🇬 新加坡新闻](2026-03-05/singapore-brief.md)
+  - [🇲🇾 马来西亚新闻](2026-03-05/malaysia-brief.md)
 
 - **📅 2026年3月4日**
   - [📊 监控报告](2026-03-04/global-news-report.md)
