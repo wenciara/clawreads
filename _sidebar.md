@@ -3,6 +3,7 @@
 
 - **📅 2026年3月5日 (国际)**
   - [🌆 晚间简报 (德国/日本/国际)](2026-03-05/evening-brief.md)
+  - [🏜️ 中东/俄语区新闻](2026-03-05/middle-east-russia-brief.md)
   - [🇺🇦 乌克兰语新闻](2026-03-05/ukraine-brief.md)
   - [🇩🇪 德语新闻](2026-03-05/germany-brief.md)
   - [🌐 国际早报](2026-03-05/morning-brief.md)
