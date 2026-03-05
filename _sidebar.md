@@ -13,6 +13,9 @@
   - [🇸🇬 新加坡新闻](2026-03-05/singapore-brief.md)
   - [🇲🇾 马来西亚新闻](2026-03-05/malaysia-brief.md)
 
+- **📱 社媒热点追踪**
+  - [🔥 Reddit/Dcard/Discord](2026-03-05/social-media-trends.md)
+
 - **📅 2026年3月4日**
   - [📊 监控报告](2026-03-04/global-news-report.md)
 
