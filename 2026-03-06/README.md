@@ -17,7 +17,8 @@
 | 🇬🇧 英国 | 5+ | 伊朗战争立场 |
 | 🇷🇺 俄罗斯 | 2+ | 核武时代 |
 | 🇺🇦 乌克兰 | 6+ | 美国求援、德援 |
-| 📱 社交媒体 | 10+ | 导弹库存、中国能源 |
+| 💬 Hacker News | 10+ | GPT-5.4、Wikipedia安全 |
+| 📱 Telegram | 10+ | 导弹库存、中国能源 |
 
 ---
 
@@ -116,11 +117,42 @@
 
 ---
 
-## 📱 社交媒体热门 (Telegram)
+## 📱 社交媒体热门
+
+### 💬 Hacker News (科技/创业社区)
+
+**来源**: [news.ycombinator.com](https://news.ycombinator.com/)
+
+#### 🔥 热门帖子
+
+| 排名 | 标题 | 分数 | 评论 |
+|------|------|------|------|
+| 1 | Where things stand with the Department of War (Anthropic) | 137 | 82 |
+| 2 | CBP tapped into online advertising ecosystem to track movements | 309 | 135 |
+| 3 | **GPT-5.4 (OpenAI)** | **631** | **552** |
+| 4 | The next generations of Bubble Tea, Lip Gloss, Bubbles (Charm) | 84 | 25 |
+| 5 | Protocol to handle low-effort AI-Generated pull requests | 83 | 21 |
+| 6 | The Brand Age (Paul Graham) | 216 | 195 |
+| 7 | 10% of Firefox crashes caused by bitflips | 263 | 150 |
+| 8 | Good software knows when to stop | 335 | 190 |
+| 9 | **Wikipedia read-only after mass admin compromise** | **873** | **308** |
+| 10 | Hardware hotplug events on Linux | 117 | 5 |
+| 15 | Judge orders $130B tariff refunds | 796 | 592 |
+| 18 | Proton Mail helped FBI unmask protester | 199 | 99 |
+
+#### 🔍 HN 社区关注焦点
+- **AI/大模型**: GPT-5.4 发布引发最多讨论 (552评论)
+- **网络安全**: Wikipedia 管理员账户被大规模入侵
+- **隐私**: CBP利用广告追踪、Proton Mail协助FBI事件
+- **政策**: 法官命令退还1300亿美元关税
+
+---
+
+### 💬 Telegram (@worldnews)
 
 **来源**: @worldnews (36K订阅者)
 
-### 🔥 最热话题
+#### 🔥 最热话题
 
 #### 1. 中国叫停柴油汽油出口
 - **互动**: ❤3 | 1.72K次浏览
@@ -145,6 +177,15 @@
 
 ---
 
+### ⚠️ 访问受限平台
+
+| 平台 | 状态 | 原因 |
+|------|------|------|
+| **Reddit** | ❌ 无法访问 | reCAPTCHA 人机验证 |
+| **Discord** | ❌ 无法访问 | 需要登录和加入服务器 |
+
+---
+
 ## 🔍 跨语言对比分析
 
 ### 同一事件的不同叙述
@@ -159,7 +200,8 @@
 1. **🇯🇵 日本**: WBC棒球是全民头条，英语媒体只是小众体育
 2. **🇬🇧 英国**: 强调不参与军事打击，美媒中是次要信息
 3. **🇷🇺 俄罗斯**: 深度分析法国核政策对全球战略影响
-4. **📱 社媒**: 关注技术缺陷 (防空系统)、量化分析 (导弹库存)
+4. **💬 HN**: GPT-5.4 和 AI 安全成为科技社区焦点
+5. **📱 社媒**: 关注技术缺陷 (防空系统)、量化分析 (导弹库存)
 
 ---
 
@@ -175,5 +217,6 @@
 
 ---
 
-*报告生成: 09:40 CST*  
-*数据来源: Yahoo!ニュース(日语)、AP News/BBC(英语)、Медуза(俄语)、Укрінформ(乌克兰语)、Telegram(社交媒体)*
+*报告生成: 09:50 CST*  
+*数据来源: Yahoo!ニュース(日语)、AP News/BBC(英语)、Медуза(俄语)、Укрінформ(乌克兰语)、Telegram(社交媒体)、Hacker News(科技社区)*  
+*访问受限: Reddit (reCAPTCHA)、Discord (需登录)*
