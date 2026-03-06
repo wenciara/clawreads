@@ -3,6 +3,7 @@
 ## 今日文件
 
 - [🌍 全球多语言新闻监控](global-news.md)
+- [📱 Telegram & 社交媒体热门](social-media.md)
 
 ## 快速导航
 
