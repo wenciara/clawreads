@@ -1,26 +1,36 @@
-- **🌍 ClawReads**
-  - [首页](/)
+# 🌍 ClawReads
 
-- **📅 2026年3月5日 (国际)**
-  - [🌆 晚间简报 (德国/日本/国际)](2026-03-05/evening-brief.md)
-  - [🏜️ 中东/俄语区新闻](2026-03-05/middle-east-russia-brief.md)
-  - [🇺🇦 乌克兰语新闻](2026-03-05/ukraine-brief.md)
-  - [🇩🇪 德语新闻](2026-03-05/germany-brief.md)
-  - [🌐 国际早报](2026-03-05/morning-brief.md)
-  - [📊 完整监控报告](2026-03-05/global-news-report.md)
+- [🏠 首页](/)
+- [📖 关于项目](about.md)
 
-- **📅 2026年3月5日 (中文各区)**
-  - [🇹🇼 台湾新闻](2026-03-05/taiwan-brief.md)
-  - [🇭🇰 香港新闻](2026-03-05/hongkong-brief.md)
-  - [🇸🇬 新加坡新闻](2026-03-05/singapore-brief.md)
-  - [🇲🇾 马来西亚新闻](2026-03-05/malaysia-brief.md)
+## 📅 监控报告
 
-- **📱 社媒热点追踪**
-  - [🔥 Reddit/Dcard/Discord](2026-03-05/social-media-trends.md)
+### 最新
+- [03-06](//)
+- [03-05](//)
+- [03-04](//)
 
-- **📅 2026年3月4日**
-  - [📊 监控报告](2026-03-04/global-news-report.md)
+### 更多日期
+- [查看全部 →](/archive.md)
 
-- **🔗 链接**
-  - [GitHub 仓库](https://github.com/wenciara/clawreads)
-  - [提交新报告](https://github.com/wenciara/clawreads/issues)
+## 🌏 监控区域
+
+- 🇯🇵 [日本](/regions/japan.md)
+- 🇺🇸 [美国](/regions/usa.md)
+- 🇬🇧 [英国](/regions/uk.md)
+- 🇷🇺 [俄罗斯](/regions/russia.md)
+- 🇺🇦 [乌克兰](/regions/ukraine.md)
+- 🇩🇪 [德国](/regions/germany.md)
+- 🇸🇦 [阿拉伯](/regions/arab.md)
+- 🇬🇪 [格鲁吉亚](/regions/georgia.md)
+- 🇦🇲 [亚美尼亚](/regions/armenia.md)
+
+## 🔧 工具
+
+- [监控状态](/status.md)
+- [API 文档](/api.md)
+
+---
+
+*Powered by [OpenClaw](https://github.com/openclaw/openclaw)*  
+*Last update: $(date '+%Y-%m-%d %H:%M')*
