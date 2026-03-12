@@ -74,16 +74,81 @@
     .sidebar-toggle span {
       background: white;
     }
+    /* 日历样式 */
+    .calendar {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .calendar th {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 12px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .calendar td {
+      width: 14.28%;
+      height: 60px;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid #e0e0e0;
+      position: relative;
+    }
+    .calendar td.empty {
+      background: #f9f9f9;
+    }
+    .calendar td.has-content {
+      background: #e8f4f8;
+      font-weight: bold;
+    }
+    .calendar td.has-content a {
+      color: #667eea;
+      text-decoration: none;
+      display: block;
+      width: 100%;
+      height: 100%;
+      line-height: 60px;
+    }
+    .calendar td.has-content a:hover {
+      background: #d0e8f0;
+      border-radius: 4px;
+    }
+    .calendar td.today {
+      border: 2px solid #667eea;
+    }
+    .date-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 15px 0;
+    }
+    .date-tag {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: transform 0.2s;
+    }
+    .date-tag:hover {
+      transform: scale(1.05);
+      box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+    }
   </style>
 </head>
 <body>
   <div id="app"></div>
   <script>
+    // 预定义的日期列表（实际使用时可以通过 API 或构建时生成）
+    const availableDates = ["2026-03-13", "2026-03-12", "2026-03-11", "2026-03-08", "2026-03-06", "2026-03-05", "2026-03-04"];
+    
     window.$docsify = {
       name: '🌍 ClawReads',
       repo: 'https://github.com/wenciara/clawreads',
       loadSidebar: true,
-      subMaxLevel: 3,
+      subMaxLevel: 2,
       auto2top: true,
       relativePath: false,
       alias: {
@@ -101,27 +166,77 @@
         errorText: '复制失败',
         successText: '已复制'
       },
-      pagination: {
-        previousText: '上一篇',
-        nextText: '下一篇',
-        crossChapter: true
-      },
       plugins: [
         function(hook, vm) {
-          hook.beforeEach(function(html) {
-            var url = 'https://github.com/wenciara/clawreads/blob/main/' + vm.route.file;
-            var editHtml = '[:memo: 在 GitHub 上编辑](' + url + ')\n';
-            return html + '\n\n---\n' + editHtml;
+          hook.afterEach(function(html) {
+            // 在首页插入动态日历
+            if (vm.route.path === '/') {
+              const calendarHtml = generateCalendar();
+              return html.replace('<!-- DYNAMIC_CALENDAR -->', calendarHtml);
+            }
+            return html;
           });
         }
       ]
     };
+    
+    function generateCalendar() {
+      const today = new Date();
+      const year = 2026;
+      const month = 2; // 3月 (0-indexed)
+      
+      const firstDay = new Date(year, month, 1).getDay();
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      
+      let calendarHtml = '<h2>📆 2026年3月</h2>';
+      calendarHtml += '<table class="calendar"><tr>';
+      calendarHtml += '<th>周日</th><th>周一</th><th>周二</th><th>周三</th><th>周四</th><th>周五</th><th>周六</th>';
+      calendarHtml += '</tr><tr>';
+      
+      // 填充空白天数
+      for (let i = 0; i < firstDay; i++) {
+        calendarHtml += '<td class="empty"></td>';
+      }
+      
+      // 填充日期
+      for (let day = 1; day <= daysInMonth; day++) {
+        const dateStr = `2026-03-${day.toString().padStart(2, '0')}`;
+        const hasContent = availableDates.includes(dateStr);
+        const isToday = today.getDate() === day && today.getMonth() === month && today.getFullYear() === year;
+        
+        let cellClass = '';
+        if (hasContent) cellClass += 'has-content ';
+        if (isToday) cellClass += 'today ';
+        
+        if (hasContent) {
+          calendarHtml += `<td class="${cellClass}"><a href="/${dateStr}/">${day}</a></td>`;
+        } else {
+          calendarHtml += `<td class="${cellClass}">${day}</td>`;
+        }
+        
+        if ((firstDay + day) % 7 === 0) {
+          calendarHtml += '</tr><tr>';
+        }
+      }
+      
+      calendarHtml += '</tr></table>';
+      
+      // 添加日期标签云
+      calendarHtml += '<h3>📌 快速导航</h3>';
+      calendarHtml += '<div class="date-list">';
+      availableDates.slice().reverse().forEach(date => {
+        const day = date.split('-')[2];
+        calendarHtml += `<a class="date-tag" href="/${date}/">3月${parseInt(day)}日</a>`;
+      });
+      calendarHtml += '</div>';
+      
+      return calendarHtml;
+    }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
 </body>
 </html>
