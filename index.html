@@ -141,7 +141,7 @@
 <body>
   <div id="app"></div>
   <script>
-    // 预定义的日期列表（实际使用时可以通过 API 或构建时生成）
+    // 可用的日期列表（自动生成的）
     const availableDates = ["2026-03-15", "2026-03-14", "2026-03-13", "2026-03-12", "2026-03-11", "2026-03-08", "2026-03-06", "2026-03-05", "2026-03-04"];
     
     window.$docsify = {
@@ -150,7 +150,7 @@
       loadSidebar: true,
       subMaxLevel: 2,
       auto2top: true,
-      relativePath: false,
+      relativePath: true,
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
       },
@@ -183,12 +183,12 @@
     function generateCalendar() {
       const today = new Date();
       const year = 2026;
-      const month = 2; // 3月 (0-indexed)
+      const month = 03 - 1; // 0-indexed
       
       const firstDay = new Date(year, month, 1).getDay();
       const daysInMonth = new Date(year, month + 1, 0).getDate();
       
-      let calendarHtml = '<h2>📆 2026年3月</h2>';
+      let calendarHtml = '<h2>📆 2026年03月</h2>';
       calendarHtml += '<table class="calendar"><tr>';
       calendarHtml += '<th>周日</th><th>周一</th><th>周二</th><th>周三</th><th>周四</th><th>周五</th><th>周六</th>';
       calendarHtml += '</tr><tr>';
@@ -198,9 +198,10 @@
         calendarHtml += '<td class="empty"></td>';
       }
       
-      // 填充日期
+      // 填充日期 - 使用相对路径 ./YYYY-MM-DD/ 避免GitHub Pages子目录404
       for (let day = 1; day <= daysInMonth; day++) {
-        const dateStr = `2026-03-${day.toString().padStart(2, '0')}`;
+        const dayStr = day.toString().padStart(2, '0');
+        const dateStr = year + '-03-' + dayStr;
         const hasContent = availableDates.includes(dateStr);
         const isToday = today.getDate() === day && today.getMonth() === month && today.getFullYear() === year;
         
@@ -209,9 +210,10 @@
         if (isToday) cellClass += 'today ';
         
         if (hasContent) {
-          calendarHtml += `<td class="${cellClass}"><a href="/${dateStr}/">${day}</a></td>`;
+          // 关键修复：使用相对路径 ./ 而不是绝对路径 /
+          calendarHtml += '<td class="' + cellClass + '"><a href="./' + dateStr + '/">' + day + '</a></td>';
         } else {
-          calendarHtml += `<td class="${cellClass}">${day}</td>`;
+          calendarHtml += '<td class="' + cellClass + '">' + day + '</td>';
         }
         
         if ((firstDay + day) % 7 === 0) {
@@ -221,12 +223,12 @@
       
       calendarHtml += '</tr></table>';
       
-      // 添加日期标签云
+      // 添加日期标签云 - 同样使用相对路径
       calendarHtml += '<h3>📌 快速导航</h3>';
       calendarHtml += '<div class="date-list">';
       availableDates.slice().reverse().forEach(date => {
         const day = date.split('-')[2];
-        calendarHtml += `<a class="date-tag" href="/${date}/">3月${parseInt(day)}日</a>`;
+        calendarHtml += '<a class="date-tag" href="./' + date + '/">03月' + parseInt(day) + '日</a>';
       });
       calendarHtml += '</div>';
       
