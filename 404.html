@@ -4,7 +4,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <title>ClawReads - 未找到</title>
+  <title>ClawReads</title>
+  <!-- GitHub Pages SPA redirect: preserve path so docsify can load it -->
+  <script>
+    (function() {
+      // Get the original path from the redirect chain
+      var path = window.location.pathname.replace('/clawreads', '') || '/';
+      // Re-write hash for docsify to pick up
+      var target = window.location.origin + '/clawreads/#' + path;
+      // Only redirect if we're not already at root
+      if (path !== '/' && path !== '/index.html') {
+        window.location.replace(target);
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <style>
     body {
@@ -22,14 +35,8 @@
       max-width: 500px;
       padding: 40px;
     }
-    h1 {
-      font-size: 5rem;
-      margin: 0;
-    }
-    p {
-      font-size: 1.2rem;
-      margin: 20px 0;
-    }
+    h1 { font-size: 5rem; margin: 0; }
+    p { font-size: 1.2rem; margin: 20px 0; }
     a {
       display: inline-block;
       margin-top: 20px;
@@ -40,16 +47,13 @@
       border-radius: 25px;
       font-weight: bold;
     }
-    a:hover {
-      transform: scale(1.05);
-    }
+    a:hover { transform: scale(1.05); }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>🐙</h1>
-    <h1>404</h1>
-    <p>芯芯没找到这篇报道... 可能还在路上 🐙</p>
+    <p>正在跳转到芯芯的报道...</p>
     <a href="./">← 回到首页</a>
   </div>
 </body>
